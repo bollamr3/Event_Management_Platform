@@ -14,7 +14,7 @@ Student Name: RaviTeja Bollam
 Module Code: 7051CEM  
 
 
-Day 1 (April 1)
+Day 1 
 -Created project folder structure manually:
 -src/ for Java files
 -webapp/ for JSP and XML
@@ -24,8 +24,17 @@ Day 1 (April 1)
 -Added basic index.jsp and web.xml files
 -Created basic servlet EventServlet.java with dummy output
 -Set up Eclipse project (initial attempt)
- Day 2 (April 2)
+
+
+ Day 2 
 - Moved index.jsp to correct webapp folder
 - Fixed project structure for WAR export
 - Set up Tomcat manually with correct JAVA_HOME
 - Successfully exported WAR and deployed to localhost
+
+Day 3
+- Added HTML form to `index.jsp` for event name and venue
+- Created servlet logic to read form data using `doPost()`
+- Displayed input data dynamically on response page
+- Changed app branding to “EventManager”
+- Successfully tested JSP-to-servlet interaction on Tomcat
