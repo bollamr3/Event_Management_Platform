@@ -1,12 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Event Management Home</title>
+    <title>EventManager</title>
 </head>
 <body>
-    <h1>Welcome to Event Management Platform</h1>
-    <form action="event" method="get">
-        <button type="submit">Go to Event Servlet</button>
+    <h1>EventManager - Create Event</h1>
+    <form action="event" method="post">
+        <label>Event Name:</label>
+        <input type="text" name="eventName" required><br><br>
+
+        <label>Venue:</label>
+        <input type="text" name="eventPlace" required><br><br>
+
+        <input type="submit" value="Submit Event">
     </form>
 </body>
 </html>
