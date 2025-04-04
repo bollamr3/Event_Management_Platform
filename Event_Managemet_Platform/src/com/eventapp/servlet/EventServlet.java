@@ -1,21 +1,26 @@
 package com.eventapp.servlet;
 
-import java.io.IOException;
-import javax.servlet.http.*;
-import javax.servlet.ServletException;
+import java.io.*;
+import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
 
-// This servlet handles GET requests for the /event path
 @WebServlet("/event")
 public class EventServlet extends HttpServlet {
-
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse res)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        res.setContentType("text/html; charset=UTF-8");
+        String eventTitle = request.getParameter("eventName");
+        String eventVenue = request.getParameter("eventPlace");
 
-        String message = "<h2>Hello! You have reached the Event Page via Servlet.</h2>";
-        res.getWriter().write(message);
+        response.setContentType("text/html");
+        PrintWriter writer = response.getWriter();
+
+        writer.println("<html><head><title>EventManager</title></head><body>");
+        writer.println("<h2>EventManager - Received Details</h2>");
+        writer.println("<p><b>Event:</b> " + eventTitle + "</p>");
+        writer.println("<p><b>Venue:</b> " + eventVenue + "</p>");
+        writer.println("</body></html>");
     }
 }
