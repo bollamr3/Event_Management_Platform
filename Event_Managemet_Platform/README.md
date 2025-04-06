@@ -38,3 +38,25 @@ Day 3
 - Displayed input data dynamically on response page
 - Changed app branding to “EventManager”
 - Successfully tested JSP-to-servlet interaction on Tomcat
+
+Day 4 Progress 
+
+Implemented Features:
+- Successfully connected the servlet (`EventServlet.java`) to a MySQL database using JDBC.
+- Created and configured a `DBConnection.java` helper class for managing database connectivity.
+- Modified the servlet to receive form data (Event Name and Venue) from `index.jsp`.
+- Inserted submitted event data into the MySQL `events` table in the `event_db` database.
+- Displayed a success confirmation message on the webpage after form submission.
+-
+ Tested:
+- `index.jsp` form posts to `/event` via POST method.
+- Database successfully receives new rows upon submission.
+- Form validation ensures fields are not empty.
+- Output page shows event name and venue for confirmation.
+
+ Technical:
+- MySQL Connector JAR (`mysql-connector-j-9.2.0.jar`) added to `WEB-INF/lib` and referenced in Eclipse build path.
+- WAR file re-exported and deployed to Tomcat 9 server (`webapps/EventManagementPlatform.war`).
+- Tested on `http://localhost:8080/EventManagementPlatform/index.jsp`.
+
+
