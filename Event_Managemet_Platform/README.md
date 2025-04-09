@@ -74,4 +74,28 @@ Part A: Core Functionalities
 - WAR file re-exported and deployed to Tomcat 9 server (`webapps/EventManagementPlatform.war`).
 - Tested on `http://localhost:8080/EventManagementPlatform/index.jsp`.
 
+**Search & Filter Functionality Fully Implemented
+File Modified: displayEvent.jsp, SearchServlet.java
+
+**Description:
+Added a filter form at the top of displayEvent.jsp with:
+Text input for Name
+Dropdown for Location
+Dropdown for Event Type
+
+On clicking "Search", results are filtered using servlet logic.
+
+**Bug Fixed:
+405 error → changed the form method to GET to align with doGet() in SearchServlet.
+
+**SearchServlet.java
+Implemented clean, parameterized SQL queries for secure filtering.
+
+Ensured it forwards filtered data (eventList) to displayEvent.jsp.
+
+**Filtering Works Dynamically
+Events now show up based on the chosen name, location, or type.
+
+Dropdowns preserve selection after search (UX improvement).
+
 
