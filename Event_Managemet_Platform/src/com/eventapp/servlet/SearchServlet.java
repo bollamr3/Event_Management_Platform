@@ -1,43 +1,33 @@
 package com.eventapp.servlet;
 
-import java.io.*;
 import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
+import javax.servlet.annotation.WebServlet;
+import java.io.*;
 import java.sql.*;
 import com.eventapp.db.DBConnection;
 
 @WebServlet("/search")
 public class SearchServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    private static final long serialVersionUID = 6L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        String keyword = request.getParameter("keyword");
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-
-        out.println("<h2>🔍 Search Results</h2>");
+        String search = request.getParameter("search");
+        String criteria = request.getParameter("criteria");
 
         try {
             Connection conn = DBConnection.getConn();
-            PreparedStatement ps = conn.prepareStatement(
-                "SELECT * FROM events WHERE eventType LIKE ? OR location LIKE ? OR eventDate LIKE ?"
-            );
-            String likeQuery = "%" + keyword + "%";
-            ps.setString(1, likeQuery);
-            ps.setString(2, likeQuery);
-            ps.setString(3, likeQuery);
-
+            String sql = "SELECT * FROM events WHERE " + criteria + " LIKE ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, "%" + search + "%");
             ResultSet rs = ps.executeQuery();
 
-            while (rs.next()) {
-                out.println("<li><strong>" + rs.getString("name") + "</strong> | " +
-                    rs.getString("eventDate") + " | " + rs.getString("location") + "<br>" +
-                    rs.getString("description") + " | Type: " + rs.getString("eventType") +
-                    " | Attendees: " + rs.getInt("attendees") + "</li><br>");
-            }
+            request.setAttribute("eventList", rs);
+            RequestDispatcher rd = request.getRequestDispatcher("displayEvent.jsp");
+            rd.forward(request, response);
         } catch (Exception e) {
-            e.printStackTrace(out);
+            e.printStackTrace();
         }
     }
 }
