@@ -54,6 +54,21 @@ Implemented Features:
 - Form validation ensures fields are not empty.
 - Output page shows event name and venue for confirmation.
 
+- Day 5 Progress
+
+Part A: Core Functionalities
+1. **Add Events**
+   - Form captures: Name, Location, Type, Date, Description
+2. **Display Events**
+   - Categorized display (Conference, Workshop, etc.)
+3. **RSVP & Attendance**
+   - Users can RSVP to events using Event ID
+   - Attendee count is updated in the database
+4. **Search & Filter**
+   - Search events by keyword (type/date/location)
+5. **Data Validation**
+   - Required field validation (HTML-side)
+
  Technical:
 - MySQL Connector JAR (`mysql-connector-j-9.2.0.jar`) added to `WEB-INF/lib` and referenced in Eclipse build path.
 - WAR file re-exported and deployed to Tomcat 9 server (`webapps/EventManagementPlatform.war`).
