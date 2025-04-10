@@ -1,0 +1,68 @@
+@relation event_type
+
+@attribute location string
+@attribute eventDate date "yyyy-MM-dd"
+@attribute description string
+@attribute eventType {Conference,Wedding,Workshop,Party}
+
+@data
+"London","2025-02-20","AI conference with workshops",Conference
+"Manchester","2025-03-15","Private family wedding",Wedding
+"Coventry","2025-01-28","Learn Java basics",Workshop
+"Birmingham","2025-12-31","Celebrate the New Year",Party
+"Edinburgh","2025-06-10","Tech showcase and talks",Conference
+"Leeds","2025-04-18","Garden wedding celebration",Wedding
+"Cardiff","2025-07-01","Graduation celebration party",Party
+"Glasgow","2025-11-02","Healthcare innovation event",Conference
+"Liverpool","2025-08-15","Cybersecurity beginner class",Workshop
+"Bath","2025-05-14","Countryside wedding",Wedding
+"Nottingham","2025-10-01","Halloween costume party",Party
+"Oxford","2025-02-10","Robotics and AI discussions",Conference
+"Sheffield","2025-03-22","Advanced Python workshop",Workshop
+"York","2025-09-14","Historic venue wedding",Wedding
+"Brighton","2025-12-25","Christmas celebration",Party
+"Cambridge","2025-06-22","Green tech meet",Conference
+"Derby","2025-01-30","HTML and CSS basics",Workshop
+"Newcastle","2025-04-28","Wedding near the beach",Wedding
+"Leicester","2025-07-30","Summer DJ night",Party
+"Bristol","2025-08-08","Medical tech talks",Conference
+"Reading","2025-02-12","Cyber ethics workshop",Workshop
+"Exeter","2025-05-05","Reception and wedding",Wedding
+"Preston","2025-11-05","Diwali lights party",Party
+"Stirling","2025-04-19","Smart city summit",Conference
+"Hull","2025-03-07","Data analytics bootcamp",Workshop
+"Luton","2025-05-25","Traditional Indian wedding",Wedding
+"London","2025-12-31","New Year celebration",Party
+"Southampton","2025-08-17","Climate change forum",Conference
+"Portsmouth","2025-06-14","Intro to machine learning",Workshop
+"Bradford","2025-09-18","Wedding at manor",Wedding
+"Norwich","2025-10-10","Glow-themed dance party",Party
+"Coventry","2025-07-09","Java full stack workshop",Workshop
+"Oxford","2025-03-12","Academic tech forum",Conference
+"York","2025-08-02","Photography workshop",Workshop
+"Manchester","2025-04-21","Downtown wedding",Wedding
+"Liverpool","2025-10-27","Costume party night",Party
+"Leeds","2025-06-16","Cloud computing conference",Conference
+"Cambridge","2025-09-09","AI & NLP workshop",Workshop
+"Newcastle","2025-05-18","Castle wedding",Wedding
+"Glasgow","2025-11-29","Friendsgiving dinner",Party
+"Birmingham","2025-07-04","Big Data summit",Conference
+"Nottingham","2025-01-22","JavaScript bootcamp",Workshop
+"London","2025-05-12","Wedding at church",Wedding
+"Bristol","2025-10-20","Bollywood DJ night",Party
+"Leicester","2025-03-04","Healthcare AI discussion",Conference
+"Sheffield","2025-06-25","Beginner python training",Workshop
+"Manchester","2025-08-30","Couple wedding reception",Wedding
+"Cardiff","2025-12-15","Winter solstice party",Party
+"Southampton","2025-02-28","Start-up tech forum",Conference
+"Reading","2025-05-27","Cyber security for kids",Workshop
+"Exeter","2025-07-03","Family wedding picnic",Wedding
+"Brighton","2025-11-10","Beachside costume party",Party
+"Hull","2025-09-15","Digital transformation meet",Conference
+"Coventry","2025-04-05","ReactJS hands-on",Workshop
+"Portsmouth","2025-03-30","Park wedding",Wedding
+"York","2025-06-29","Summer carnival",Party
+"Oxford","2025-10-02","Quantum computing seminar",Conference
+"Birmingham","2025-05-20","Android dev crash course",Workshop
+"Leeds","2025-07-12","Traditional wedding",Wedding
+"Luton","2025-12-01","Christmas DJ bash",Party
