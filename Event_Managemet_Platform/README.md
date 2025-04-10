@@ -53,9 +53,10 @@ Implemented Features:
 - Database successfully receives new rows upon submission.
 - Form validation ensures fields are not empty.
 - Output page shows event name and venue for confirmation.
-
-- Day 5 Progress
-
+  
+**
+Day 5 Progress
+**
 Part A: Core Functionalities
 1. **Add Events**
    - Form captures: Name, Location, Type, Date, Description
@@ -97,5 +98,60 @@ Ensured it forwards filtered data (eventList) to displayEvent.jsp.
 Events now show up based on the chosen name, location, or type.
 
 Dropdowns preserve selection after search (UX improvement).
+
+**Day6 Progress**
+
+Part A – Final Features Implemented:
+Edit Events Functionality fully implemented
+
+editEvent.jsp added to pre-fill and update event data
+
+EditEventServlet.java updates the database using id as reference
+
+Linked Edit buttons added to event listings in displayEvent.jsp
+
+Delete Events Functionality
+
+DeleteEventServlet.java removes events by ID
+
+Delete links added with confirmation prompt
+
+Search and Filter Feature
+
+Users can now search by event name, location, or type
+
+Dropdown and input field in displayEvent.jsp
+
+Backend logic handled in SearchServlet.java using dynamic SQL
+
+Form Validation Added
+
+HTML5 validation for all form fields (required, type="date", etc.)
+
+Prevents form submission if fields are empty or invalid
+
+Part B – Machine Learning Integration:
+events.arff file created with 100 balanced events
+
+Used J48 Decision Tree Classifier from WEKA
+
+Achieved approximately 80% accuracy
+
+Java integration with EventTypeClassifier.java
+
+Reads .arff file and prints prediction output to console
+
+Technical Fixes Done Today:
+Fixed mysql-connector.jar export issue (Deployment Assembly updated)
+
+Resolved ClassNotFoundException for JDBC Driver
+
+Fixed 404 & 405 errors in displayEvent.jsp and servlet mappings
+
+Cleaned up obsolete HTML attributes and JSP warnings
+
+Committed final updates to GitHub (e.g., DisplayEventServlet, SearchServlet, arff file, ML logic)
+
+
 
 
